@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/trang_ch" />
+        <item
+            android:id="@+id/nav_giaovu"
+            android:icon="@drawable/ic_giaovu"
+            android:title="Phòng giáo vụ" />
+        <item
+            android:id="@+id/nav_diemthi"
+            android:icon="@drawable/ic_diemthi"
+            android:title="Điểm thi" />
+        <item
+            android:id="@+id/nav_lichthi"
+            android:icon="@drawable/ic_lichthi"
+            android:title="Lịch thi" />
+        <item
+            android:id="@+id/nav_map"
+            android:icon="@drawable/ic_map"
+            android:title="Bản đồ" />
+        <item
+            android:id="@+id/nav_bus"
+            android:icon="@drawable/ic_bus"
+            android:title="Các Tuyến Bus" />
+        <item
+            android:id="@+id/nav_note"
+            android:icon="@drawable/ic_note"
+            android:title="Sổ tay sinh viên" />
+        <item
+            android:id="@+id/nav_intro"
+            android:icon="@drawable/ic_gioithieu"
+            android:title="Giới thiệu" />
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/ic_contacts"
+            android:title="Liên hệ" />
+    </group>
+
+
+
+</menu>

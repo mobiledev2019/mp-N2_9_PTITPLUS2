@@ -1,0 +1,351 @@
+<resources>
+    <string name="app_name">PtitPlus</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Ptit Plus 2</string>
+    <string name="nav_header_subtitle">PtitPlus@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="trang_ch">Trang Chủ</string>
+
+    <string name="title_1"> MỘT SỐ CHÍNH SÁCH CỦA NHÀ NƯỚC VỀ HỌC PHÍ VÀ TÍN DỤNG ĐỐI VỚI SINH VIÊN </string>
+    <string name="context_1">
+        "<h1>MỘT SỐ CHÍNH SÁCH CỦA NHÀ NƯỚC VỀ HỌC PHÍ VÀ TÍN DỤNG ĐỐI VỚI SINH VIÊN</h1>"
+
+        "<h4><b>I/ Nghị định số 49/2010/NĐ-CP, ngày 14/5/2010 của chính phủ:</b></h4><i>qui định về miễn giảm học phí hỗ trọe chi phí học tập và cơ chế thu, sử dụng học phí đối với cơ sở giáo dụng thuộc hệ thống giáo dục quốc dân từ năm học 2010 - 2011 đến năm học 2014 - 2015</i>	"
+        "<h4><b>Điều 3. Đối tượng không phải đóng học phí</b></h4>	"
+        "<p>Đối tượng không phải đóng học phí tại các cơ sở giáo dục công lập bao gồm: học sinh tiểu học; học sinh, sinh viên sư phạm, người theo học các khóa đào tạo nghiệp vụ sư phạm để đạt chuẩn nghề nghiệp.</p>	"
+        "<h4><b>Điều 4. Đối tượng được miễn học phí</b></h4>	"
+        "<p>1. Người có công với cách mạng và thân nhân của người có công với cách mạng theo Pháp lệnh Ưu đãi người có công với cách mạng số 26/2005/PL-UBTVQH11 ngày 29 tháng 6 năm 2005.</p>	"
+
+        "<p>2. Trẻ em học mẫu giáo và học sinh, sinh viên có cha mẹ thường trú tại các xã biên giới, vùng cao, hải đảo và các xã có điều kiện kinh tế - xã hội đặc biệt khó khăn.</p>	"
+
+        "<p>3. Trẻ em học mẫu giáo và học sinh, sinh viên mồ côi cả cha lẫn mẹ không nơi nương tựa hoặc bị tàn tật, khuyết tật có khó khăn về kinh tế.</p>	"
+
+        "<p>4. Trẻ em bị bỏ rơi, mất nguồn nuôi dưỡng; trẻ em mồ côi cha hoặc mẹ nhưng người còn lại là mẹ hoặc cha mất tích theo quy định tại Điều 78 của Bộ luật Dân sự hoặc không đủ năng lực, khả năng để nuôi dưỡng theo quy định của pháp luật; trẻ em có cha và mẹ hoặc cha hoặc mẹ đang trong thời gian chấp hành hình phạt tù tại trại giam, không còn người nuôi dưỡng.</p>	"
+
+        "<p>5. Trẻ em học mẫu giáo và học sinh phổ thông có cha mẹ thuộc diện hộ nghèo theo quy định của Nhà nước.</p>	"
+
+        "<p>6. Trẻ em học mẫu giáo và học sinh phổ thông là con của hạ sĩ quan và binh sĩ, chiến sĩ đang phục vụ có thời hạn trong lực lượng vũ trang nhân dân.</p>	"
+
+        "<p>7. Học sinh, sinh viên hệ cử tuyển (kể cả học sinh cử tuyển học nghề nội trú với thời gian đào tạo từ 3 tháng trở lên).</p>"
+
+        "<p>8. Học sinh trường phổ thông dân tộc nội trú, trường dự bị đại học, khoa dự bị đại học.</p>"
+
+        "<p>9. Học sinh, sinh viên tại các cơ sở giáo dục nghề nghiệp và giáo dục đại học là người dân tộc thiểu số thuộc hộ nghèo và hộ có thu nhập tối đa bằng 150% thu nhập của hộ nghèo.</p>"
+
+        "<h4><b>Điều 5. Đối tượng được giảm học phí</b></h4>"
+
+	    "<p>1. Các đối tượng được giảm 70% học phí gồm: học sinh, sinh viên các chuyên ngành nhã nhạc cung đình, chèo, tuồng, cải lương, múa, xiếc và một số chuyên ngành, nghề nặng nhọc, độc hại.</p>"
+
+	    "<p>2. Các đối tượng được giảm 50% học phí gồm:</p>
+
+	    "<p>a) Trẻ em học mẫu giáo và học sinh, sinh viên là con cán bộ, công nhân, viên chức mà cha hoặc mẹ bị tai nạn lao động hoặc mắc bệnh nghề nghiệp được hưởng trợ cấp thường xuyên;</p>"
+
+	    "<p>b) Trẻ em học mẫu giáo và học sinh phổ thông có cha mẹ thuộc diện hộ có thu nhập tối đa bằng 150% thu nhập của hộ nghèo;</p>"
+
+	    "<p>c) Học sinh tốt nghiệp trung học cơ sở đi học nghề.</p>"
+        "<h4><b>Điều 6. Đối tượng được hỗ trợ chi phí học tập</b></h4>"
+
+        "<p>1. Trẻ em học mẫu giáo và học sinh phổ thông có cha mẹ thường trú tại các xã biên giới, vùng cao, hải đảo và các xã có điều kiện kinh tế - xã hội đặc biệt khó khăn.</p>"
+
+        "<p>2. Trẻ em học mẫu giáo và học sinh phổ thông mồ côi cả cha lẫn mẹ không nơi nương tựa hoặc bị tàn tật, khuyết tật có khó khăn về kinh tế.</p>"
+
+        "<p>3. Trẻ em học mẫu giáo và học sinh phổ thông có cha mẹ thuộc diện hộ nghèo theo quy định của Nhà nước, không thuộc các xã quy định tại khoản 1 Điều này.</p>"
+
+        "<h4><b>Điều 7. Cơ chế miễn, giảm học phí và hỗ trợ chi phí học tập</b></h4>"
+
+        "<p>2. Nhà nước thực hiện cấp bù học phí cho các cơ sở giáo dục mầm non và phổ thông công lập có đối tượng được miễn, giảm học phí theo số lượng người học thực tế và mức thu học phí. Cấp bù học phí (theo mức học phí của các trường công lập trong vùng) cho học sinh là con của người có công với nước, các đối tượng chính sách học mẫu giáo và phổ thông ngoài công lập. <b>Cấp trực tiếp tiền hỗ trợ miễn, giảm học phí cho các đối tượng được miễn, giảm học phí học ở các cơ sở giáo dục nghề nghiệp và giáo dục đại học công lập để các đối tượng này đóng học phí đầy đủ cho nhà trường.</b></p>"
+
+        "<p>1. Việc miễn, giảm học phí sẽ được thực hiện trong suốt thời gian học tập tại nhà trường, trừ trường hợp có những thay đổi về lý do miễn hoặc giảm học phí.</p>"
+
+        "<p>3. Nhà nước thực hiện hỗ trợ chi phí học tập trực tiếp cho các đối tượng quy định tại Điều 6 Nghị định này với mức 70.000 đồng/học sinh/tháng để mua sách, vở và các đồ dùng khác… thời gian được hưởng theo thời gian học thực tế và không quá 9 tháng/năm học.</p>"
+       " <h4><b>Điều 12. Học phí đối với giáo dục nghề nghiệp và giáo dục đại học</b></h4>"
+
+       " <p>1. Mức trần học phí đối với đào tạo trình độ đại học tại trường công lập theo các nhóm ngành đào tạo chương trình đại trà từ năm học 2010 - 2011 đến năm học 2014 - 2015 như sau:</p>"
+       " <table border="solid">"
+          "<thead>"
+           " <tr>"
+              "<th>Nhóm ngành</th>"
+              "<th>Năm học 2010 - 2011</th>"
+              "<th>Năm học 2011 - 2012</th>"
+              "<th>Năm học 2012 - 2013</th>"
+              "<th>Năm học 2013 - 2014</th>"
+              "<th>Năm học 2014 - 2015</th>"
+            "</tr>
+          "</thead>"
+          "<tbody>"
+            "<tr>"
+                "<td>1. Khoa học xã hội, kinh tế, luật; nông, lâm, thủy sản</td>"
+               " <td>290</td>"
+                "<td>355</td>"
+                "<td>420</td>"
+               " <td>485</td>"
+                "<td>550</td>"
+            "</tr>"
+            "<tr>"
+              "<td>2. Khoa học tự nhiên; kỹ thuật, công nghệ; thể dục thể thao, nghệ thuật; khách sạn, du lịch</td>"
+                "<td>310</td>"
+                "<td>395</td>"
+                "<td>480</td>"
+                "<td>565</td>"
+                "<td>650</td>"
+           " </tr>"
+            "<tr>"
+              "<td>3. Y dược</td>"
+               " <td>340</td>"
+               " <td>455</td>"
+                "<td>570</td>"
+               " <td>685</td>"
+               " <td>800</td>"
+           " </tr>"
+         " </tbody>"
+   " </table>"
+
+    </string>
+    <string name="title_2">QUY ĐỊNH DÀO TẠO DẠI HỌC CAO ĐẲNG THEO HỆ THỐNG TÍN CHỈ CỦA HỌC VIỆN CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG</string>
+    <string name="context_2">
+
+        "	<i>(Ban hành theo kèm theo quyết định số 897/QĐ-HV, ngày 11/12/2012 của Giám đốc Học Viện)</i>	"
+        "
+        "    <!-- /////////////// -->    "
+        "	<h4><b>Điều 1. Phạm vi điều chỉnh và đối tượng áp dụng</b></h4>	"
+
+        "	<p>1. Quy chế này quy định về tổ chức và hoạt động của Học viện Công nghệ Bưu chính Viễn thông (sau đây gọi tắt là Học viện).</p>	"
+
+        "	<p>2. Quy chế này áp dụng đối với các tổ chức, đơn vị, cán bộ, công chức, viên chức, người lao động, học viên, sinh viên (sau đây gọi tắt là người học) của Học viện và các tổ chức, cá nhân có liên quan trong hoạt động của Học viện.</p>	"
+        "    <!-- /////////////////// -->    "
+        "	<h4><b>Điều 2. Vị trí và chức năng</b></h4>	"
+
+        "	<p>1. Học viện Công nghệ Bưu chính Viễn thông là cơ sở giáo dục đại học công lập thuộc hệ thống giáo dục quốc dân, được thành lập theo Quyết định số 516/QĐ-TTg ngày 11/7/1997 của Thủ tướng Chính phủ: là đơn vị sự nghiệp trực thuộc Bộ Thông tin và Truyền thông.	"
+        "	Học viện thực hiện chức năng đào tạo đại học, sau đại học, nghiên cứu khoa học, đào tạo bồi dưỡng ngắn hạn, tư vấn và chuyển giao công nghệ</p>	"
+
+        "	<p>3. Học viện có trụ sở chính tại thành phố Hà Nội và có Cơ sở đào tạo tại thành phố Hồ Chí Minh.</p>	"
+
+        "	<p>4. Học viện là đơn vị sự nghiệp có thu, được quyền tự chủ, tự chịu trách nhiệm theo quy định hiện hành của Nhà nước, của Bộ Thông tin và Truyền thông đối với đơn vị sự nghiệp công lập tự đảm bảo chi thường xuyên và chi đầu tư và được vận dụng cơ chế tài chính như doanh nghiệp theo quy định của pháp luật.</p>	"
+
+        "	<p>5. Học viện có tư cách pháp nhân, có con dấu và tài khoản riêng theo quy định của pháp luật.</p>	"
+
+        "    <!-- //////////////// -->    "
+        "	<h4><b>Điều 4. Quyền tự chủ và trách nhiệm xã hội của Học viện</b></h4>	"
+
+        "	<p>Học viện được quyền tự chủ và chịu trách nhiệm xã hội theo quy định của Nhà nước, của Bộ Thông tin và Truyền thông và Quy chế này về quy hoạch, kế hoạch phát triển Học viện, tổ chức các hoạt động đào tạo, khoa học và công nghệ, tài chính, quan hệ quốc tế, tổ chức và nhân sự. Cụ thể như sau</p>	"
+
+        "	<p>1. Về thực hiện nhiệm vụ đào tạo và nghiên cứu khoa học</p>	"
+
+        "	<p>a) Phát triển chương trình đào tạo theo hướng hiện đại, tổ chức biên soạn hoặc lựa chọn giáo trình giảng dạy phù hợp với mục tiêu đào tạo của từng chương trình đào tạo bảo đảm chuẩn kiến thức, kỹ năng của người học sau tốt nghiệp đáp ứng yêu cầu phát triển kinh tế - xã hội và hội nhập quốc tế; bảo đảm đội ngũ giảng viên, cán bộ quản lý cơ hữu, giáo trình, tài liệu và cơ sở vật chất phục vụ đào tạo đáp ứng các điều kiện theo quy định; in phôi văn bằng, quản lý và cấp văn bằng, chứng chỉ cho người học theo quy định của pháp luật.</p>	"
+
+        "	<p>b) Quyết định mở các ngành, chuyên ngành đào tạo trình độ đại học, thạc sĩ, tiến sĩ và các chương trình bồi dưỡng theo nhu cầu của xã hội khi đáp ứng đủ điều kiện theo quy định của pháp luật; xác định chỉ tiêu tuyển sinh theo quy định và quyết định hình thức tuyển sinh, bảo đảm tính công khai, minh bạch.</p>	"
+
+        "	<p>c) Quyết định các hoạt động đào tạo (chương trình đào tạo, phương pháp giảng dạy; ngôn ngữ giảng dạy; phương pháp thi; kiểm tra đánh giá kết quả học tập; giáo trình, học liệu và quản lý đào tạo; in, cấp phát và quản lý văn bằng, chứng chỉ); công bố công khai và bảo đảm chuẩn đầu ra, thực hiện kiểm định chất lượng giáo dục theo quy định để bảo đảm chất lượng đào tạo.</p>	"
+
+        "	<p>d) Quyết định, tổ chức triển khai các hoạt động khoa học và công nghệ; khuyến khích thương mại hóa kết quả nghiên cứu khoa học, việc ứng dụng và chuyển giao kết quả nghiên cứu khoa học gắn với thị trường và nhu cầu xã hội; quyết định tham gia các nhiệm vụ khoa học và công nghệ, dịch vụ khoa học và công nghệ, tổ chức hội thảo với các tổ chức, cá nhân trong và ngoài nước; chủ động tìm kiếm và nhận tài trợ, viện trợ cho các dự án hợp tác nghiên cứu khoa học và công nghệ trong nước và quốc tế theo quy định của pháp luật.</p>	"
+
+        "	<p>đ) Quyết định liên kết đào tạo với các tổ chức, cơ sở đào tạo trong nước và nước ngoài trên cơ sở chương trình liên kết đã được kiểm định chất lượng; thực hiện cung cấp thông tin về các chương trình liên kết đào tạo, tổ chức quản lý đào tạo đúng quy định, bảo đảm quyền lợi chính đáng của người học</p>	"
+
+        "	<p>e) Thực hiện cung cấp dịch vụ sự nghiệp công trong lĩnh vực giáo dục và đào tạo, khoa học và công nghệ, bao gồm cả dịch vụ do Nhà nước đặt hàng và thực hiện nhiệm vụ đột xuất được cơ quan nhà nước có thẩm quyền giao.</p>	"
+
+        "	<p>3. Về tài chính</p>	"
+
+        "	<p>Thu, chi tài chính, đầu tư phát triển các điều kiện đảm bảo chất lượng đào tạo theo quy định của pháp luật; quyết định mức thu học phí tương ứng với điều kiện đảm bảo chất lượng đào tạo đối với chương trình đào tạo chất lượng cao và các quy định về tự chủ tài chính đối với Học viện.</p>	"
+
+        "	<p>a) Học phí</p>	"
+
+        "	<p>- Học viện thực hiện tính toán và công khai mức thu học phí cụ thể cho từng nhóm ngành, chuyên ngành, chương trình đào tạo trước khi tuyển sinh, bảo đảm mức thu học phí bình quân (của các chương trình đại trà) không vượt quá mức thu học phí bình quân tối đa của Học viện theo quy định của Chính phủ</p>	"
+
+        "	<p>- Học viện quyết định mức thu học phí đối với các chương trình đặc thù theo đề án mở chương trình được cơ quan nhà nước có thẩm quyền phê duyệt.</p>	"
+
+        "	<p>b) Thu sự nghiệp</p>	"
+
+        "	<p>- Học viện tự xây dựng và quyết định ban hành các khoản thu, mức thu đối với các hoạt động cung cấp dịch vụ và hỗ trợ đào tạo để nâng cao chất lượng đào tạo và phục vụ theo yêu cầu của người học (gồm thu học lại, thi lại, học cải thiện điểm, thu ký túc xá,...), các khoản thu này được công khai trên cơ sở lấy thu bù đắp chi phí hoạt động thường xuyên.</p>	"
+
+        "	<p>- Học viện tự xây dựng và quyết định các khoản thu, mức thu đối với các dịch vụ đào tạo - bồi dưỡng ngắn hạn, tư vấn chuyển giao công nghệ, dịch vụ khác theo hợp đồng thỏa thuận với các tổ chức, cá nhân trên nguyên tắc bảo đảm bù đắp chi phí và có tích lũy hợp lý.</p>	"
+
+        "	<p>c) Về cơ chế và quản lý tài chính</p>	"
+
+        "	<p>Học viện được thực hiện cơ chế tài chính của đơn vị sự nghiệp công lập tự bảo đảm chi thường xuyên, chi đầu tư và được vận dụng cơ chế tài chính như doanh nghiệp, cụ thể:</p>	"
+
+        "	<p>d) Tiền lương và thu nhập</p>	"
+
+        "	<p>Học viện được áp dụng cơ chế tiền lương, thu nhập theo cơ chế doanh nghiệp</p>	"
+
+        "	<p>đ) Sử dụng nguồn thu:</p>	"
+
+        "	<p>- Thực hiện tự chủ và chịu trách nhiệm trong việc lập kế hoạch và quyết định sử dụng kinh phí từ các nguồn thu hợp pháp của Học viện để tiếp tục đầu tư mở rộng cơ sở vật chất, đào tạo nhân lực và bảo đảm chất lượng đào tạo, nghiên cứu khoa học;</p>	"
+
+        "	<p>- Sau khi thực hiện bù đắp các chi phí thường xuyên, phần chênh lệch thu lớn hơn chi còn lại của Học viện được trích lập các quỹ sau: Quỹ phát triển hoạt động sự nghiệp (tối thiểu 25% chênh lệch thu chi), Quỹ khen thưởng, Quỹ phúc lợi, Quỹ dự phòng, ổn định thu nhập và các quỹ hỗ trợ sinh viên;</p>	"
+
+        "	<p>- Khoản thu học phí và các khoản thu sự nghiệp được gửi tại ngân hàng thương mại; toàn bộ tiền lãi tiền gửi được sử dụng để lập quỹ học bổng và các quỹ hỗ trợ sinh viên.</p>	"
+
+        "	<p>4. Chính sách hỗ trợ, học bổng, học phí:</p>	"
+
+        "	<p>a) Học viện hỗ trợ toàn bộ phần chênh lệch giữa mức học phí của Học viện với mức học phí được miễn, giảm theo quy định của Nhà nước đối với sinh viên thuộc đối tượng được hưởng chính sách miễn, giảm học phí, chế độ hỗ trợ chi phí học tập theo quy định hiện hành, chế độ viện trợ đối với học sinh, sinh viên người nước ngoài theo diện Hiệp định giữa Chính phủ Việt Nam với Chính phủ các nước có liên quan;</p>	"
+
+        "	<p>b) Ngoài các đối tượng được miễn, giảm học phí theo chính sách của Nhà nước, Học viện xây dựng, thực hiện chính sách học bổng, khuyến khích học tập dành cho sinh viên xuất sắc và sinh viên là đối tượng chính sách;</p>	"
+
+        "	<p>c) Học viện ưu tiên bố trí nơi ở cho sinh viên nghèo, sinh viên là đối tượng chính sách được ở, được miễn, giảm tiền thuê chỗ ở trong ký túc xá của Học viện và các chính sách hỗ trợ khác tùy theo điều kiện của Học viện.</p>	"
+
+        "	<p>6. Về cơ chế giám sát:</p>	"
+
+        "	<p>a) Học viện sửa đổi, bổ sung, hoàn thiện các quy chế bảo đảm công khai, minh bạch; kiện toàn tổ chức, nâng cao hiệu lực, hiệu quả hoạt động của Hội đồng Học viện, bảo đảm thực hiện giám sát toàn bộ hoạt động của Học viện. Hội đồng Học viện quyết định về chiến lược và phương hướng hoạt động của Học viện; giám sát việc thực hiện các nghị quyết của Hội đồng Học viện; việc thực hiện quy chế dân chủ trong các hoạt động và việc triển khai thực hiện Quy chế này;,</p>	"
+
+        "	<p>b) Học viện công khai Quy chế chi tiêu nội bộ. Quy chế chi tiêu nội bộ do Giám đốc Học viện ban hành sau khi tổ chức thảo luận rộng rãi, dân chủ, công khai trong Học viện và có ý kiến thống nhất của tổ chức công đoàn Học viện;</p>	"
+
+    </string>
+    <string name="title_3">THÔNG TIN TỔ CHỨC TUYẾN SINH ĐẠI HỌC CHÍNH QUI NĂM 2019</string>
+    <string name="context_3">
+      "  <h1>THÔNG TIN TỔ CHỨC TUYẾN SINH ĐẠI HỌC CHÍNH QUI NĂM 2019</h1>"
+
+		"<h3>HỌC VIỆN CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG</h3>"
+
+		"<p>* Ký hiệu: BVH (Cơ sở phía Bắc)</p>"
+
+		"<p>* Địa chỉ: Km10 Đường Nguyễn Trãi, Quận Hà Đông, Hà Nội</p>"
+
+		"<p>* ĐT: (024) 33528122, 33512252; Fax: (024) 33829236</p>"
+
+		"<p>* Website: http://ptit.edu.vn; http://tuyensinh.ptit.edu.vn</p>"
+
+		"<p>* Fanpage tuyển sinh: www.facebook.com/ptittuyensinh</p>"
+
+		"<p><b>Đối tượng tuyển sinh:</b>Các thí sinh đã tốt nghiệp Trung học phổ thông (theo hình thức giáo dục chính quy hoặc giáo dục thường xuyên) hoặc đã tốt nghiệp trung cấp (người tốt nghiệp trung cấp nhưng chưa có bằng tốt nghiệp THPT phải có chứng chỉ công nhận hoàn thành các môn văn hóa trong chương trình giáo dục THPT); và tham dự kỳ thi tốt nghiệp THPT quốc gia năm 2019 với các bài thi/môn theo tổ hợp tương ứng các ngành của Học viện.</p>"
+
+		"<p><b>Phạm vi tuyển sinh:</b>Học viện tuyển sinh trên phạm vi cả nước.</p>"
+
+		"<p><b>Phương thức xét tuyển:</b>Học viện Công nghệ Bưu chính Viễn thông chỉ sử dụng duy nhất kết quả kỳ thi tốt nghiệp THPT quốc gia năm 2019 để thực hiện xét tuyển thí sinh trúng tuyển vào đại học;</p>"
+
+		"<p>Thí sinh đăng ký xét tuyển theo ngành và theo một trong các tổ hợp môn thi tương ứng (xem bảng dưới đây);</p>"
+
+		"<p>Không giới hạn số ngành khi thí sinh đăng ký xét tuyển nhưng phải sắp xếp nguyện vọng theo thứ tự ưu tiên từ cao xuống thấp (nguyện vọng 1 là nguyện vọng cao nhất).</p>"
+
+		"<p><b>Ngành học, chỉ tiêu, tổ hợp xét tuyển (Cơ sở phía Bắc):</b></p>"
+
+		"<table border="solid">"
+			"<thead>"
+				"<tr>"
+					<th>TT</th>
+					<th>Ngành học</th>
+					<th>Mã ngành</th>
+					<th>Tổ hợp môn thi/xét tuyển</th>
+					<th>Chỉ tiêu</th>
+				"</tr>"
+			"</thead>"
+			"<tbody>"
+				"<tr>"
+					<td></td>
+					<td><b>Các ngành đào tạo đại học:</b></td>
+					<td></td>
+					<td></td>
+					<td><b>2,600</b></td>
+				"</tr>"
+				"<tr>"
+					<td>1</td>
+					<td>Kỹ thuật điện tử viễn thông</td>
+					<td>7520207</td>
+					<td>A00, A01</td>
+					<td>430</td>
+				"</tr>"
+				"<tr>"
+					<td>2</td>
+					<td>Công nghệ kỹ thuật điện, điện tử</td>
+					<td>7510301</td>
+					<td>A00, A01</td>
+					<td>250</td>
+				"</tr>"
+				"<tr>"
+					<td>3</td>
+					<td>Công nghệ thông tin</td>
+					<td>7480201</td>
+					<td>A00, A01</td>
+					<td>700</td>
+				"</tr>"
+				"<tr>"
+					<td>4</td>
+					<td>An toàn thông tin</td>
+					<td>7520202</td>
+					<td>A00, A01</td>
+					<td>200</td>
+				"</tr>"
+				"<tr>"
+					<td>5</td>
+					<td>Công nghệ đa phương tiện</td>
+					<td>7329001</td>
+					<td>A00, A01, D01</td>
+					<td>250</td>
+				"</tr>"
+				"<tr>"
+					<td>6</td>
+					<td>Truyền thông đa phương tiện</td>
+					<td>7520207</td>
+					<td>A00, A01, D01</td>
+					<td>120</td>
+				"</tr>"
+				"<tr>"
+					<td>7</td>
+					<td>Quản trị kinh doanh</td>
+					<td>7520101</td>
+					<td>A00, A01, D01</td>
+					<td>170</td>
+				"</tr>"
+				"<tr>"
+					<td>8</td>
+					<td>Marketing</td>
+					<td>7520115</td>
+					<td>A00, A01, D01</td>
+					<td>200</td>
+				"</tr>"
+				"<tr>"
+					<td>9</td>
+					<td>Kế toán</td>
+					<td>7520301</td>
+					<td>A00, A01, D01</td>
+					<td>200</td>
+				"</tr>"
+				"<tr>"
+					<td>10</td>
+					<td>Thương mại điện tử</td>
+					<td>7340122</td>
+					<td>A00, A01, D01</td>
+					<td>80</td>
+				"</tr>"
+			"</tbody>"
+		"</table>"
+
+		"<p><b>Ngưỡng đảm bảo chất lượng đầu vào, điều kiện nhận ĐKXT:</b></p>"
+
+		"<p>Học viện sẽ thông báo mức điểm nhận hồ sơ đăng ký xét tuyển vào đại học của Học viện. Ngoài mức điểm nhận hồ sơ đăng ký xét tuyển nêu trên, Học viện không sử dụng thêm bất kỳ điều kiện nào về điểm học bạ hay kết quả học tập THPT trước khi xét tuyển.</p>"
+
+		"<p><b>Nguyên tắc xét tuyển:</b></p>"
+
+		"<p>- Xét tuyển theo ngành và theo tổ hợp môn thi/bài thi xét tuyển</p>"
+
+		"<p>- Điểm trúng tuyển của các tổ hợp môn thi/bài thi trong cùng một ngành là bằng nhau;</p>"
+
+		"<p>- Xét trúng tuyển từ thí sinh có kết quả cao xuống và đảm bảo chất lượng tuyển sinh;</p>"
+
+		"<p>- Xét tuyển các nguyện vọng bình đẳng theo kết quả thi (điểm trúng tuyển giữa các nguyện vọng là bằng nhau), nếu thí sinh không trúng tuyển nguyện vọng ở thứ tự ưu tiên thứ nhất (nguyện vọng 1) thì sẽ được tự động xét tuyển ở nguyện vọng ưu tiên thứ hai (nguyện vọng 2) và kế tiếp.</p>"
+
+		"<p>- Thí sinh chỉ trúng tuyển vào 1 nguyện vọng ưu tiên cao nhất trong danh sách các nguyện vọng đã đăng ký, khi đã trúng tuyển ở nguyện vọng nào thì không được xét tuyển tiếp ở nguyện vọng sau;</p>"
+
+		"<p>- Điểm trúng tuyển được tính theo thang điểm 10 trên tổng điểm tối đa của 3 bài thi/môn thi trong tổ hợp xét tuyển là 30;</p>"
+
+		"<p>- Các điều kiện khác thực hiện theo Quy chế tuyển sinh đại học hệ chính quy hiện hành của Bộ Giáo dục và Đào tạo.</p>"
+
+		"<p><b>Tổ chức tuyển sinh:</b></p>"
+
+		"<p>- Thời gian xét tuyển: Theo lịch xét tuyển của Bộ Giáo dục và Đào tạo</p>"
+
+		"<p>- Hình thức nhận hồ sơ ĐKXT: Theo quy định của Bộ Giáo dục và Đào tạo</p>"
+
+		"<p>- Các điều kiện xét tuyển: Không tổ chức sơ tuyển</p>"
+
+		"<p><b>Chính sách ưu tiên:</b></p>"
+
+		"<p>- Học viện thực hiện chính sách ưu tiên về đối tượng, khu vực theo Quy chế tuyển sinh của Bộ GD</p>"
+
+		"<p>- Học viện thực hiện tuyển thẳng và ưu tiên xét tuyển theo Quy chế tuyển sinh của Bộ GD (có thông báo riêng)</p>"
+
+    </string>
+
+
+</resources>
