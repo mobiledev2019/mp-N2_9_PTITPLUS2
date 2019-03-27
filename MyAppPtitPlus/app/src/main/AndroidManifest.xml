@@ -11,7 +11,8 @@
         android:roundIcon="@drawable/ptitplus"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BusActivity"></activity>
+        <activity android:name=".NewsDetailActivity"></activity>
+        <activity android:name=".BusActivity" />
         <activity android:name=".MapActivity" />
         <activity android:name=".LichThiActivity" />
         <activity android:name=".DiemThiActivity" />

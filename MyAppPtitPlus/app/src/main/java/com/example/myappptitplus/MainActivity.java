@@ -6,12 +6,14 @@ import android.support.v4.app.FragmentManager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -43,7 +45,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-
+    TextView txt_label ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -119,54 +121,64 @@ public class MainActivity extends AppCompatActivity
             //khoi tao trang bang fragment
             FragmentManager fm = getSupportFragmentManager();
             fm.beginTransaction().replace(R.id.main,new HomeApp()).commit();
-            Toast.makeText(this,"Trang Chủ",Toast.LENGTH_LONG).show();
+            ActionBar actionBar = getSupportActionBar();
+            actionBar.setTitle("Trang Chủ");
             // Handle the camera action
         } else if (id == R.id.nav_giaovu) {
             //khoi tao trang bang fragment
             FragmentManager fm = getSupportFragmentManager();
             fm.beginTransaction().replace(R.id.main,new GiaoVu()).commit();
-            Toast.makeText(this,"Giáo vụ",Toast.LENGTH_LONG).show();
+            ActionBar actionBar = getSupportActionBar();
+            actionBar.setTitle("Giáo Vụ");
 
         } else if (id == R.id.nav_diemthi) {
             //khoi tao trang bang fragment
             FragmentManager fm = getSupportFragmentManager();
             fm.beginTransaction().replace(R.id.main,new DiemThi()).commit();
-            Toast.makeText(this,"Điểm thi",Toast.LENGTH_LONG).show();
+            ActionBar actionBar = getSupportActionBar();
+            actionBar.setTitle("Điểm Thi");
 
         } else if (id == R.id.nav_lichthi) {
             //khoi tao trang bang fragment
             FragmentManager fm = getSupportFragmentManager();
             fm.beginTransaction().replace(R.id.main,new LichThi()).commit();
-            Toast.makeText(this,"Lịch Thi",Toast.LENGTH_LONG).show();
+            ActionBar actionBar = getSupportActionBar();
+            actionBar.setTitle("Lịch Thi");
 
         } else if(id == R.id.nav_map){
             //khoi tao trang bang fragment
             FragmentManager fm = getSupportFragmentManager();
             fm.beginTransaction().replace(R.id.main,new BanDo()).commit();
-            Toast.makeText(this,"Bản đồ",Toast.LENGTH_LONG).show();
+            ActionBar actionBar = getSupportActionBar();
+            actionBar.setTitle("Sổ Tay");;
 
         } else if(id == R.id.nav_bus){
             //khoi tao trang bang fragment
             FragmentManager fm = getSupportFragmentManager();
             fm.beginTransaction().replace(R.id.main,new TimBus()).commit();
-            Toast.makeText(this,"Tìm Bus",Toast.LENGTH_LONG).show();
+            ActionBar actionBar = getSupportActionBar();
+            actionBar.setTitle("Bus");
 
         } else if(id == R.id.nav_note){
             //khoi tao trang bang fragment
             FragmentManager fm = getSupportFragmentManager();
             fm.beginTransaction().replace(R.id.main,new SoTay()).commit();
-            Toast.makeText(this,"Sổ tay sinh vien",Toast.LENGTH_LONG).show();
+            ActionBar actionBar = getSupportActionBar();
+            actionBar.setTitle("Sổ Tay");
 
         } else if(id == R.id.nav_intro){
             //khoi tao trang bang fragment
             FragmentManager fm = getSupportFragmentManager();
             fm.beginTransaction().replace(R.id.main,new GioiThieu()).commit();
+            ActionBar actionBar = getSupportActionBar();
+            actionBar.setTitle("Giới Thiệu");
 
         } else if(id == R.id.nav_contact){
             //khoi tao trang bang fragment
             FragmentManager fm = getSupportFragmentManager();
             fm.beginTransaction().replace(R.id.main,new LienHe()).commit();
-
+            ActionBar actionBar = getSupportActionBar();
+            actionBar.setTitle("Liên Hệ");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
