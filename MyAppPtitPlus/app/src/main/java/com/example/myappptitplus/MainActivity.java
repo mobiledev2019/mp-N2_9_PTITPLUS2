@@ -1,6 +1,5 @@
 package com.example.myappptitplus;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.design.widget.NavigationView;
@@ -12,34 +11,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-import com.example.adapter.NewsHomeAdapter;
 import com.example.model.BanDo;
-import com.example.model.DiemThi;
 import com.example.model.GiaoVu;
 import com.example.model.GioiThieu;
 import com.example.model.HomeApp;
-import com.example.model.LichThi;
 import com.example.model.LienHe;
 import com.example.model.SoTay;
 import com.example.model.TimBus;
-import com.example.model_item.NewsHome;
-
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
-import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity
@@ -98,13 +78,12 @@ public class MainActivity extends AppCompatActivity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
         else if(id == R.id.action_exit){
-            // thoat chuong trinhf
+            // thoat chuong trinh
             finish();
         }
 
@@ -130,20 +109,6 @@ public class MainActivity extends AppCompatActivity
             fm.beginTransaction().replace(R.id.main,new GiaoVu()).commit();
             ActionBar actionBar = getSupportActionBar();
             actionBar.setTitle("Giáo Vụ");
-
-        } else if (id == R.id.nav_diemthi) {
-            //khoi tao trang bang fragment
-            FragmentManager fm = getSupportFragmentManager();
-            fm.beginTransaction().replace(R.id.main,new DiemThi()).commit();
-            ActionBar actionBar = getSupportActionBar();
-            actionBar.setTitle("Điểm Thi");
-
-        } else if (id == R.id.nav_lichthi) {
-            //khoi tao trang bang fragment
-            FragmentManager fm = getSupportFragmentManager();
-            fm.beginTransaction().replace(R.id.main,new LichThi()).commit();
-            ActionBar actionBar = getSupportActionBar();
-            actionBar.setTitle("Lịch Thi");
 
         } else if(id == R.id.nav_map){
             //khoi tao trang bang fragment

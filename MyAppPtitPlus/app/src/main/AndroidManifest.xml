@@ -14,8 +14,6 @@
         <activity android:name=".NewsDetailActivity"></activity>
         <activity android:name=".BusActivity" />
         <activity android:name=".MapActivity" />
-        <activity android:name=".LichThiActivity" />
-        <activity android:name=".DiemThiActivity" />
         <activity android:name=".GiaoVuActivity" />
         <activity
             android:name=".MainActivity"

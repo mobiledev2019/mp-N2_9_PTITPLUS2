@@ -13,14 +13,6 @@
             android:icon="@drawable/ic_giaovu"
             android:title="Phòng giáo vụ" />
         <item
-            android:id="@+id/nav_diemthi"
-            android:icon="@drawable/ic_diemthi"
-            android:title="Điểm thi" />
-        <item
-            android:id="@+id/nav_lichthi"
-            android:icon="@drawable/ic_lichthi"
-            android:title="Lịch thi" />
-        <item
             android:id="@+id/nav_map"
             android:icon="@drawable/ic_map"
             android:title="Bản đồ" />

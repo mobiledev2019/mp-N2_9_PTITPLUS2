@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -47,8 +49,11 @@ public class NewsHomeAdapter extends BaseAdapter {
 
         NewsHome newsHome = (NewsHome) getItem(position);
         txt_newhome.setText(newsHome.name);
-
         Picasso.with(context).load(newsHome.image).into(img_newhome);
+
+        // gan animation
+        Animation animation = AnimationUtils.loadAnimation(context,R.anim.translate_list);
+        convertView.startAnimation(animation);
         return convertView;
     }
 }

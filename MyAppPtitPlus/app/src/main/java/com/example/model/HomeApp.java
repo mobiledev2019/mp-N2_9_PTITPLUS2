@@ -12,6 +12,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -37,8 +39,6 @@ import org.jsoup.select.Elements;
 import java.util.ArrayList;
 
 public class HomeApp extends Fragment {
-
-
     NewsHomeAdapter newsHomeAdapter;
     ListView lv_newhome ;
     String url_home = "http://portal.ptit.edu.vn/category/tin-tuc/" ;
@@ -66,12 +66,12 @@ public class HomeApp extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View myvView = inflater.inflate(R.layout.activity_home,container ,false);
         lv_newhome = myvView.findViewById(R.id.lv_newhome);
-
         return myvView;
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+
         super.onViewCreated(view, savedInstanceState);
         RequestQueue requestQueue = Volley.newRequestQueue(mContext);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url_home, new Response.Listener<String>() {
@@ -131,6 +131,8 @@ public class HomeApp extends Fragment {
     }
 
     private void hienthichitiettin() {
+        Animation animation_enter = AnimationUtils.loadAnimation(mContext,R.anim.anim_enter);
+        Animation animation_exit = AnimationUtils.loadAnimation(mContext,R.anim.anim_exit);
         // khoi tao mot man hinh moi
         final Intent intent = new Intent(mContext, NewsDetailActivity.class);
         // lay du lieu
@@ -163,6 +165,7 @@ public class HomeApp extends Fragment {
                             intent.putExtra("newsimage",selectNew.image);
                             intent.putExtra("contxt",selectNew.context);
                             startActivity(intent);
+                            // goi ham animatiom
                         }
                 }
 
