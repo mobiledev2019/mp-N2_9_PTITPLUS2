@@ -131,8 +131,6 @@ public class HomeApp extends Fragment {
     }
 
     private void hienthichitiettin() {
-        Animation animation_enter = AnimationUtils.loadAnimation(mContext,R.anim.anim_enter);
-        Animation animation_exit = AnimationUtils.loadAnimation(mContext,R.anim.anim_exit);
         // khoi tao mot man hinh moi
         final Intent intent = new Intent(mContext, NewsDetailActivity.class);
         // lay du lieu
