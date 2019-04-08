@@ -2,6 +2,7 @@ package com.example.model;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -28,6 +29,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.adapter.NewsHomeAdapter;
 import com.example.model_item.NewsHome;
 import com.example.model_item.class_home;
+import com.example.myappptitplus.MainActivity;
 import com.example.myappptitplus.NewsDetailActivity;
 import com.example.myappptitplus.R;
 
@@ -71,7 +73,10 @@ public class HomeApp extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-
+        final ProgressDialog progressDialog = new ProgressDialog(mContext);
+        progressDialog.setMessage("Loading !");
+        progressDialog.setCancelable(true);
+        progressDialog.show();
         super.onViewCreated(view, savedInstanceState);
         RequestQueue requestQueue = Volley.newRequestQueue(mContext);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url_home, new Response.Listener<String>() {
@@ -99,10 +104,12 @@ public class HomeApp extends Fragment {
                                 url = element1url.attr("href");
                             }
                             arraylistNewshome.add(new NewsHome(name, image, url,null));
+                            progressDialog.dismiss();
                             System.out.println(arraylistNewshome);
                         }
                         newsHomeAdapter = new NewsHomeAdapter(arraylistNewshome,mContext);
                         lv_newhome.setAdapter(newsHomeAdapter);
+
                     }
                 }
 

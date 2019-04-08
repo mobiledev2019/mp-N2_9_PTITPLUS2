@@ -3,7 +3,9 @@ package com.example.model;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -13,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -34,6 +37,7 @@ import org.jsoup.select.Elements;
 import java.util.ArrayList;
 
 public class GiaoVu extends Fragment {
+
     Activity mContext;
     ListView lv_newGiaoVu;
     String url_giaovu ="http://portal.ptit.edu.vn/giaovu/category/thong-bao/";
@@ -45,12 +49,22 @@ public class GiaoVu extends Fragment {
     private String context3 ="";
     private String context4 ="";
 
+    //ten trang thai luu
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View myvView = inflater.inflate(R.layout.activity_giao_vu,container ,false);
         lv_newGiaoVu = myvView.findViewById(R.id.lv_newGiaovu);
+        initPreferences();
         return myvView;
+    }
+    // khoi tao gia tri de luu du lieu data vao
+    private void initPreferences() {
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(mContext);
+        editor = sharedPreferences.edit();
     }
 
     @Override
@@ -70,6 +84,7 @@ public class GiaoVu extends Fragment {
                 String title = "";
                 String context = "";
                 String url = "";
+                int i = 1;
                 Document document = Jsoup.parse(response);
                 if(document != null){
                     Elements elements = document.select("div[class = post-desc-wrapper]");
@@ -93,6 +108,12 @@ public class GiaoVu extends Fragment {
                             context = element1context.text();
                         }
                         arrayListNewsGiaoVu.add(new NewsGiaoVu(time,title,context,url));
+                        if(i == 1){
+                            // luu gia tri ban tin dau tien vao trong list de xu ly ben sevice
+                            editor.putString("DATA", title);
+                            editor.commit();
+                        }
+                        i++;
                     }
                     newsGiaoVuAdapter = new NewsGiaoVuAdapter(arrayListNewsGiaoVu,mContext);
                     lv_newGiaoVu.setAdapter(newsGiaoVuAdapter);

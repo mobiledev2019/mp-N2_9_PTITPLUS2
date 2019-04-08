@@ -1,5 +1,8 @@
 package com.example.myappptitplus;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.design.widget.NavigationView;
@@ -20,6 +23,7 @@ import com.example.model.HomeApp;
 import com.example.model.LienHe;
 import com.example.model.SoTay;
 import com.example.model.TimBus;
+import com.example.service.StartService;
 
 
 public class MainActivity extends AppCompatActivity
@@ -51,7 +55,9 @@ public class MainActivity extends AppCompatActivity
         //khoi tao trang bang fragment
         FragmentManager fm = getSupportFragmentManager();
         fm.beginTransaction().replace(R.id.main,new HomeApp()).commit();
-
+        //khoi dong service
+        Intent intent = new Intent(this, StartService.class);
+        startService(intent);
     }
 
 
