@@ -42,19 +42,14 @@ import java.util.ArrayList;
 
 public class HomeApp extends Fragment {
     NewsHomeAdapter newsHomeAdapter;
-    ListView lv_newhome ;
+    ListView lv_newhome , lv_newgiaovu;
     String url_home = "http://portal.ptit.edu.vn/category/tin-tuc/" ;
     ArrayList<NewsHome> arraylistNewshome = new ArrayList<>();
     NewsHome selectNew = null;
     Activity mContext;
-    private String con = "";
-    private String context ="";
-    private String context2 ="";
-    private String context3 ="";
-    private String context4 ="";
-    private String context5 ="";
-    private String context6 ="";
-    private String context7 ="";
+    private String context_home ="";
+    private String context2_home ="";
+    private String context3_home ="";
     String[] classDiv = class_home.classDivHome;
 
     @Override
@@ -157,15 +152,15 @@ public class HomeApp extends Fragment {
 //
 //
                             if(element1context != null){
-                                context = element1context.text();
+                                context_home = element1context.text();
                             }
                             if(element1context2 != null){
-                                context2 = element1context2.text();
+                                context2_home = element1context2.text();
                             }
                             if(element1context3 != null){
-                                context3 = element1context3.text();
+                                context3_home = element1context3.text();
                             }
-                            selectNew.context=(context+context2+context3+context4+context5+context6+context7);
+                            selectNew.context=(context_home+context2_home+context3_home);
                             // gui du lieu sang ben bang intent
                             intent.putExtra("newsimage",selectNew.image);
                             intent.putExtra("contxt",selectNew.context);

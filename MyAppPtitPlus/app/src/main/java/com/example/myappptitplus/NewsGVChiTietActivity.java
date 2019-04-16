@@ -22,7 +22,7 @@ public class NewsGVChiTietActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
         txt_title.setText(intent.getStringExtra("title"));
-        txt_content.setText(intent.getStringExtra("context"));
+        txt_content.setText(intent.getStringExtra("context")+"Học viện Công nghệ Bưu chính Viễn thông là một tổ chức Nghiên cứu - Giáo dục Đào tạo có thương hiệu, uy tín với thế mạnh về Nghiên cứu và đào tạo Đại học, Sau Đại học trong lĩnh vực Công nghệ Thông tin và Truyền thông. Học viện là cơ sở đào tạo công lập trực thuộc Bộ Thông tin và Truyền thông");
     }
 
     @Override

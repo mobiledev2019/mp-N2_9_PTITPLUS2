@@ -86,7 +86,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            Intent intent = new Intent(this,SettingActivity.class);
+            startActivity(intent);
         }
         else if(id == R.id.action_exit){
             // thoat chuong trinh

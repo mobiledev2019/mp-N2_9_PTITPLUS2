@@ -46,11 +46,13 @@ public class NewsGiaoVuAdapter extends BaseAdapter {
         TextView txt_time = convertView.findViewById(R.id.txt_time_giaovu);
         TextView txt_title = convertView.findViewById(R.id.txt_tilte_giaovu);
         TextView txt_context = convertView.findViewById(R.id.txt_context_giaovu);
+        TextView txt_tingiaovu = convertView.findViewById(R.id.txt_tingiaovu);
 
         NewsGiaoVu newsGiaoVu = (NewsGiaoVu) getItem(position);
         txt_time.setText(newsGiaoVu.time);
         txt_title.setText(newsGiaoVu.title);
         txt_context.setText(newsGiaoVu.context);
+        txt_tingiaovu.setText(newsGiaoVu.tingiaovu);
 
         Animation animation = AnimationUtils.loadAnimation(context,R.anim.translate_new);
         convertView.startAnimation(animation);

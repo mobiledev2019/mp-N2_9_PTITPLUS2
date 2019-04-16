@@ -23,6 +23,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.myappptitplus.MainActivity;
 import com.example.myappptitplus.R;
+import com.example.model_item.class_urlthongbao;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -35,7 +36,7 @@ public class StartService extends Service {
 
     Activity mContext ;
     Context context;
-    String url_giaovu ="http://portal.ptit.edu.vn/giaovu/category/thong-bao/";
+    String url_giaovu = class_urlthongbao.url_thongbao;
     //ten trang thai luu
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
@@ -98,8 +99,7 @@ public class StartService extends Service {
                             context = element1context.text();
                         }
                         String savedData = sharedPreferences.getString("DATA", "");
-                        System.out.println("12344444"+savedData);
-                        System.out.println(title);
+
                         if(savedData.equals(title) == false && i == 1){
                             hienthithongbao(title);
                         }
@@ -130,6 +130,7 @@ public class StartService extends Service {
                 .setContentTitle(title)
                 .setContentText("Tin Giáo Vụ")
                 .setSmallIcon(R.drawable.ic_home)
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setContentIntent(pIntent)
                 .setAutoCancel(true).build();
 

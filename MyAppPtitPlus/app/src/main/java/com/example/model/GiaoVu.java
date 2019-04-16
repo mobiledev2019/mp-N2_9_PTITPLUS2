@@ -14,7 +14,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -25,6 +27,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.adapter.NewsGiaoVuAdapter;
 import com.example.model_item.NewsGiaoVu;
+import com.example.model_item.danhmuc;
 import com.example.myappptitplus.NewsDetailActivity;
 import com.example.myappptitplus.NewsGVChiTietActivity;
 import com.example.myappptitplus.R;
@@ -39,15 +42,20 @@ import java.util.ArrayList;
 public class GiaoVu extends Fragment {
 
     Activity mContext;
+    Spinner sp_choice;
+    danhmuc selectdanhmuc;
+    ArrayAdapter<danhmuc> danhmucArrayAdapter;
     ListView lv_newGiaoVu;
     String url_giaovu ="http://portal.ptit.edu.vn/giaovu/category/thong-bao/";
+    String url_ttkt = "http://portal.ptit.edu.vn/ttkt/";
     ArrayList<NewsGiaoVu> arrayListNewsGiaoVu =  new ArrayList<>();
     NewsGiaoVu selsectNews = null;
     NewsGiaoVuAdapter newsGiaoVuAdapter;
-    private String context ="";
-    private String context2 ="";
-    private String context3 ="";
-    private String context4 ="";
+    private String context_giaovu ="";
+    private String context2_giaovu ="";
+    private String context3_giaovu ="";
+    private String context4_giaovu ="";
+
 
     //ten trang thai luu
     SharedPreferences sharedPreferences;
@@ -58,6 +66,9 @@ public class GiaoVu extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View myvView = inflater.inflate(R.layout.activity_giao_vu,container ,false);
         lv_newGiaoVu = myvView.findViewById(R.id.lv_newGiaovu);
+        //khoi tao danh muc de nguoi dung chon
+        sp_choice = myvView.findViewById(R.id.spin_choice);
+
         initPreferences();
         return myvView;
     }
@@ -65,6 +76,23 @@ public class GiaoVu extends Fragment {
     private void initPreferences() {
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(mContext);
         editor = sharedPreferences.edit();
+
+        danhmucArrayAdapter = new ArrayAdapter<danhmuc>(
+                mContext,
+                android.R.layout.simple_list_item_1
+        );
+        danhmucArrayAdapter.setDropDownViewResource(android.R.layout.simple_list_item_1);
+        sp_choice.setAdapter(danhmucArrayAdapter);
+
+        danhmucArrayAdapter.add(new danhmuc("0","0"));
+        danhmucArrayAdapter.add(new danhmuc("1","1"));
+        danhmucArrayAdapter.add(new danhmuc("2","2"));
+        danhmucArrayAdapter.add(new danhmuc("4","3"));
+        danhmucArrayAdapter.add(new danhmuc("5","4"));
+        danhmucArrayAdapter.add(new danhmuc("6","5"));
+        danhmucArrayAdapter.add(new danhmuc("7","6"));
+        danhmucArrayAdapter.add(new danhmuc("8","7"));
+        //khoi tao cac gia tri lưu data
     }
 
     @Override
@@ -76,6 +104,12 @@ public class GiaoVu extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        gettingiaovu(3);
+        gettinttkt(3);
+        addvents();
+    }
+
+    private void gettingiaovu(final int x) {
         RequestQueue requestQueue = Volley.newRequestQueue(mContext);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url_giaovu, new Response.Listener<String>() {
             @Override
@@ -84,36 +118,43 @@ public class GiaoVu extends Fragment {
                 String title = "";
                 String context = "";
                 String url = "";
+
                 int i = 1;
+                int j = 1;
                 Document document = Jsoup.parse(response);
                 if(document != null){
                     Elements elements = document.select("div[class = post-desc-wrapper]");
                     for (Element element:elements){
-                        Element element1time = element.getElementsByTag("span").get(5);
-                        Element element1title = element.getElementsByTag("h2").first();
-                        Element element1context = element.getElementsByTag("div").get(8);
-                        Element element1url = element.getElementsByTag("a").get(4);
+                        if(j <= x){
+                            Element element1time = element.getElementsByTag("span").get(5);
+                            Element element1title = element.getElementsByTag("h2").first();
+                            Element element1context = element.getElementsByTag("div").get(8);
+                            Element element1url = element.getElementsByTag("a").get(4);
 
-                        if(element1time != null){
-                            time = element1time.text();
+                            if(element1time != null){
+                                time = element1time.text();
+                            }
+                            if(element1title != null){
+                                title = element1title.text();
+                            }
+                            if(element1url != null){
+                                url = element1url.attr("href");
+                                System.out.println(url);
+                            }
+                            if (element1context != null){
+                                context = element1context.text();
+                            }
+                            arrayListNewsGiaoVu.add(new NewsGiaoVu(time,title,context,url,"Tin Giáo Vụ"));
+                            if(i == 1){
+                                // luu gia tri ban tin dau tien vao trong list de xu ly ben sevice
+                                editor.putString("DATAGiaoVu", title);
+                                editor.commit();
+                            }
+                            i++;
+                            j++;
+                            System.out.println("giaovu :"+j);
+                            System.out.println("gia tri s :"+x);
                         }
-                        if(element1title != null){
-                            title = element1title.text();
-                        }
-                        if(element1url != null){
-                            url = element1url.attr("href");
-                            System.out.println(url);
-                        }
-                        if (element1context != null){
-                            context = element1context.text();
-                        }
-                        arrayListNewsGiaoVu.add(new NewsGiaoVu(time,title,context,url));
-                        if(i == 1){
-                            // luu gia tri ban tin dau tien vao trong list de xu ly ben sevice
-                            editor.putString("DATA", title);
-                            editor.commit();
-                        }
-                        i++;
                     }
                     newsGiaoVuAdapter = new NewsGiaoVuAdapter(arrayListNewsGiaoVu,mContext);
                     lv_newGiaoVu.setAdapter(newsGiaoVuAdapter);
@@ -127,10 +168,67 @@ public class GiaoVu extends Fragment {
         });
         requestQueue.add(stringRequest);
         requestQueue.start();
-
-
-        addvents();
     }
+
+    private void gettinttkt(final int x) {
+        RequestQueue requestQueue = Volley.newRequestQueue(mContext);
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url_ttkt, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                String time = "";
+                String title = "";
+                String context = "";
+                String url = "";
+                int i = 1;
+                int j = 1;
+                Document document = Jsoup.parse(response);
+                if(document != null){
+                    Elements elements = document.select("div[class = post-desc-wrapper]");
+                    for (Element element:elements){
+                        if(j <= x){
+                            Element element1time = element.getElementsByTag("span").get(5);
+                            Element element1title = element.getElementsByTag("h2").first();
+                            Element element1context = element.getElementsByTag("div").get(8);
+                            Element element1url = element.getElementsByTag("a").get(4);
+
+                            if(element1time != null){
+                                time = element1time.text();
+                            }
+                            if(element1title != null){
+                                title = element1title.text();
+                            }
+                            if(element1url != null){
+                                url = element1url.attr("href");
+                                System.out.println(url);
+                            }
+                            if (element1context != null){
+                                context = element1context.text();
+                            }
+                            arrayListNewsGiaoVu.add(new NewsGiaoVu(time,title,context,url,"Trung Tâm Khảo Thí"));
+                            if(i == 1){
+                                // luu gia tri ban tin dau tien vao trong list de xu ly ben sevice
+                                editor.putString("DATAttkt", title);
+                                editor.commit();
+                            }
+                            i++;
+                            j++;
+                            System.out.println("ttkt  :"+j);
+                        }
+                    }
+                    newsGiaoVuAdapter = new NewsGiaoVuAdapter(arrayListNewsGiaoVu,mContext);
+                    lv_newGiaoVu.setAdapter(newsGiaoVuAdapter);
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        });
+        requestQueue.add(stringRequest);
+        requestQueue.start();
+    }
+
 
     private void addvents() {
         lv_newGiaoVu.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -141,6 +239,25 @@ public class GiaoVu extends Fragment {
                 hienthitinchitiet();
             }
         });
+
+        //chon danh muc
+        sp_choice.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                selectdanhmuc = danhmucArrayAdapter.getItem(position);
+                int x = Integer.parseInt(selectdanhmuc.getTendm());
+                System.out.println(x);
+                arrayListNewsGiaoVu.clear();
+                gettingiaovu(x);
+                gettinttkt(x);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
     }
 
     private void hienthitinchitiet() {
@@ -162,15 +279,15 @@ public class GiaoVu extends Fragment {
                         Element element1context3 = element.getElementsByTag("p").get(3);
 
                         if(element1context != null){
-                            context = element1context.text();
+                            context_giaovu = element1context.text();
                         }
                         if(element1context2 != null){
-                            context2 = element1context2.text();
+                            context2_giaovu = element1context2.text();
                         }
                         if(element1context3 != null){
-                            context3 = element1context3.text();
+                            context3_giaovu = element1context3.text();
                         }
-                        selsectNews.context=(context+"\n"+context2+"\n"+context3+"\n"+context4);
+                        selsectNews.context=(context_giaovu+"\n"+context2_giaovu+"\n"+context3_giaovu+"\n"+context4_giaovu);
                         // gui du lieu sang ben bang intent
                         intent.putExtra("title",selsectNews.title);
                         intent.putExtra("context",selsectNews.context);
