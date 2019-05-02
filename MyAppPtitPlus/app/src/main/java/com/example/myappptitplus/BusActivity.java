@@ -131,7 +131,7 @@ public class BusActivity extends FragmentActivity implements OnMapReadyCallback,
         FetchUrl.execute(url);
         //move map camera
         mMap.moveCamera(CameraUpdateFactory.newLatLng(origin));
-        mMap.animateCamera(CameraUpdateFactory.zoomTo(15));
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(11));
     }
 
     private String getUrl(LatLng origin, LatLng dest) {

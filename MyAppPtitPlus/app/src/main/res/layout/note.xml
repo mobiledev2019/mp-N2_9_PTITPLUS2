@@ -2,64 +2,38 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="5dp"
+    android:paddingTop="30dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
     android:orientation="vertical">
 
-    <ScrollView
+    <Button
+        android:id="@+id/btn_attt"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:text="an toàn thông tin" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+    <Button
+        android:id="@+id/btn_cntt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Công Nghệ Thông Tin" />
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/title_1"
-                android:textColor="@color/colorAccent"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+    <Button
+        android:id="@+id/btn_dpt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đa phương tiện" />
 
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/context_1"
-                android:textSize="15sp" />
+    <Button
+        android:id="@+id/btn_kt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="kinh tế" />
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/title_2"
-                android:textColor="@color/colorAccent"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/context_2" />
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/title_3"
-                android:textColor="@color/colorAccent"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/context_3" />
-        </LinearLayout>
-    </ScrollView>
-
+    <Button
+        android:id="@+id/btn_qtkd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="quản trị kinh doanh" />
 </LinearLayout>
