@@ -139,6 +139,9 @@ public class GiaoVu extends Fragment {
                             }
                             if(element1url != null){
                                 url = element1url.attr("href");
+                                if (url.equals("http://portal.ptit.edu.vn/giaovu/category/thong-bao/thong-bao-tu-ho%cc%a3c-vie%cc%a3n/") == true){
+                                    url = "http://portal.ptit.edu.vn/ttkt/bang-diem-thi-lan-2-hk-1-nam-hoc-2018-2019/";
+                                }
                                 System.out.println(url);
                             }
                             if (element1context != null){
@@ -277,6 +280,8 @@ public class GiaoVu extends Fragment {
                         Element element1context = element.getElementsByTag("p").first();
                         Element element1context2 = element.getElementsByTag("p").get(2);
                         Element element1context3 = element.getElementsByTag("p").get(3);
+
+                        System.out.println("day la p3" +element1context3);
 
                         if(element1context != null){
                             context_giaovu = element1context.text();
