@@ -4,14 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/txt_tintrangchu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="5dp"
-        android:text="Tin Tức Mới"
-        android:textColor="@color/colorAccent" />
-
     <ImageView
         android:id="@+id/img_newhome"
         android:layout_margin="5dp"

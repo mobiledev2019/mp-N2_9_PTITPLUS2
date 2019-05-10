@@ -21,6 +21,10 @@
             android:icon="@drawable/ic_bus"
             android:title="Các Tuyến Bus" />
         <item
+            android:id="@+id/nav_lichthi"
+            android:icon="@drawable/ic_diemthi"
+            android:title="Lịch Thi" />
+        <item
             android:id="@+id/nav_note"
             android:icon="@drawable/ic_note"
             android:title="Sổ tay sinh viên" />

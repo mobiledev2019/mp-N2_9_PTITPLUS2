@@ -20,6 +20,7 @@ import com.example.model.BanDo;
 import com.example.model.GiaoVu;
 import com.example.model.GioiThieu;
 import com.example.model.HomeApp;
+import com.example.model.LichThi;
 import com.example.model.LienHe;
 import com.example.model.SoTay;
 import com.example.model.TimBus;
@@ -131,7 +132,15 @@ public class MainActivity extends AppCompatActivity
             ActionBar actionBar = getSupportActionBar();
             actionBar.setTitle("Bus");
 
-        } else if(id == R.id.nav_note){
+        }else if(id == R.id.nav_lichthi){
+            //khoi tao trang bang fragment
+            FragmentManager fm = getSupportFragmentManager();
+            fm.beginTransaction().replace(R.id.main,new LichThi()).commit();
+            ActionBar actionBar = getSupportActionBar();
+            actionBar.setTitle("Lịch Thi");
+
+        }
+        else if(id == R.id.nav_note){
             //khoi tao trang bang fragment
             FragmentManager fm = getSupportFragmentManager();
             fm.beginTransaction().replace(R.id.main,new SoTay()).commit();

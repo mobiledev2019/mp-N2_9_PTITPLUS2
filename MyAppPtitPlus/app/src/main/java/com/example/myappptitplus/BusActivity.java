@@ -153,7 +153,7 @@ public class BusActivity extends FragmentActivity implements OnMapReadyCallback,
         String output = "json";
 
         // Building the url to the web service
-        String url = "https://maps.googleapis.com/maps/api/directions/" + output + "?" + parameters +"&mode=driving&key=AIzaSyDk4HCaLsS9c9EUs2yBW5c-zIQDA2d49j0";
+        String url = "https://maps.googleapis.com/maps/api/directions/" + output + "?" + parameters +"&mode=transit&key=AIzaSyDk4HCaLsS9c9EUs2yBW5c-zIQDA2d49j0";
 
         return url;
     }

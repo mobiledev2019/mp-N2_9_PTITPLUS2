@@ -139,7 +139,6 @@ public class StartService extends Service {
                 .setContentIntent(pIntent)
                 .setAutoCancel(true);
 
-
 //        Notification n  = new Notification.Builder(this)
 //                .setContentTitle(title)
 //                .setContentText("Tin Giáo Vụ")

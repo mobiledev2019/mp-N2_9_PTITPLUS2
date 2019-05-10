@@ -11,15 +11,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.example.adapter.XeBusAdapter;
 import com.example.model_item.xebus;
 import com.example.myappptitplus.BusActivity;
 import com.example.myappptitplus.R;
+import com.example.myappptitplus.TimDuongActivity;
 
 public class TimBus  extends Fragment {
     ListView lv_danhsachbus ;
+    Button btn_timduong ;
     XeBusAdapter xeBusAdapter;
     Activity mContext;
     @Nullable
@@ -28,6 +31,7 @@ public class TimBus  extends Fragment {
         View myvView = inflater.inflate(R.layout.activity_bus,container ,false);
         lv_danhsachbus =  myvView.findViewById(R.id.lv_danhsachbus);
         xeBusAdapter = new XeBusAdapter(mContext,R.layout.item_bus);
+        btn_timduong = myvView.findViewById(R.id.btn_timduong);
         fakeData();
         lv_danhsachbus.setAdapter(xeBusAdapter);
         return myvView;
@@ -63,6 +67,14 @@ public class TimBus  extends Fragment {
                 xebus xb = (xebus) xeBusAdapter.getItem(position);
                 Intent intent = new Intent(mContext,BusActivity.class);
                 intent.putExtra("xb",xb);
+                startActivity(intent);
+            }
+        });
+
+        btn_timduong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, TimDuongActivity.class);
                 startActivity(intent);
             }
         });

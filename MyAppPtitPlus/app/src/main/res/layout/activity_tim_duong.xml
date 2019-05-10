@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".TimDuongActivity">
+
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="31dp"
+        android:text="Điểm Bắt Đầu :"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:id="@+id/edt_diembatdau"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="nhập điểm bắt đầu"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Điểm Đến :"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp" />
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:id="@+id/edt_diemden"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="nhập điểm đến"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/btn_timbus"
+        android:layout_width="138dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:background="@color/colorPrimary"
+        android:text="Tìm Bus"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_ketquatimkiem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_ketquabus"
+        android:layout_width="match_parent"
+        android:layout_height="307dp"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp" />
+</LinearLayout>

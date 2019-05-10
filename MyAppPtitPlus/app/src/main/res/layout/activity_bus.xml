@@ -9,5 +9,12 @@
     <ListView
         android:id="@+id/lv_danhsachbus"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="656dp" />
+
+    <Button
+        android:id="@+id/btn_timduong"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Tìm Đường"
+        android:textSize="18sp" />
 </LinearLayout>
