@@ -28,6 +28,8 @@ import com.android.volley.toolbox.Volley;
 import com.example.adapter.NewsGiaoVuAdapter;
 import com.example.model_item.NewsGiaoVu;
 import com.example.model_item.danhmuc;
+import com.example.model_item.soluongtin;
+import com.example.myappptitplus.MainActivity;
 import com.example.myappptitplus.NewsDetailActivity;
 import com.example.myappptitplus.NewsGVChiTietActivity;
 import com.example.myappptitplus.R;
@@ -66,8 +68,6 @@ public class GiaoVu extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View myvView = inflater.inflate(R.layout.activity_giao_vu,container ,false);
         lv_newGiaoVu = myvView.findViewById(R.id.lv_newGiaovu);
-        //khoi tao danh muc de nguoi dung chon
-        sp_choice = myvView.findViewById(R.id.spin_choice);
 
         initPreferences();
         return myvView;
@@ -77,22 +77,6 @@ public class GiaoVu extends Fragment {
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(mContext);
         editor = sharedPreferences.edit();
 
-        danhmucArrayAdapter = new ArrayAdapter<danhmuc>(
-                mContext,
-                android.R.layout.simple_list_item_1
-        );
-        danhmucArrayAdapter.setDropDownViewResource(android.R.layout.simple_list_item_1);
-        sp_choice.setAdapter(danhmucArrayAdapter);
-
-        danhmucArrayAdapter.add(new danhmuc("0","0"));
-        danhmucArrayAdapter.add(new danhmuc("1","1"));
-        danhmucArrayAdapter.add(new danhmuc("2","2"));
-        danhmucArrayAdapter.add(new danhmuc("4","3"));
-        danhmucArrayAdapter.add(new danhmuc("5","4"));
-        danhmucArrayAdapter.add(new danhmuc("6","5"));
-        danhmucArrayAdapter.add(new danhmuc("7","6"));
-        danhmucArrayAdapter.add(new danhmuc("8","7"));
-        //khoi tao cac gia tri lưu data
     }
 
     @Override
@@ -104,9 +88,18 @@ public class GiaoVu extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        gettingiaovu(3);
-        gettinttkt(3);
-        addvents();
+        int x = soluongtin.soluonghienthi;
+        if(x != 0){
+            gettingiaovu(x);
+            gettinttkt(x);
+            addvents();
+        }
+        else{
+            gettingiaovu(3);
+            gettinttkt(3);
+            addvents();
+        }
+
     }
 
     private void gettingiaovu(final int x) {
@@ -243,74 +236,68 @@ public class GiaoVu extends Fragment {
             }
         });
 
-        //chon danh muc
-        sp_choice.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                selectdanhmuc = danhmucArrayAdapter.getItem(position);
-                int x = Integer.parseInt(selectdanhmuc.getTendm());
-                System.out.println(x);
-                arrayListNewsGiaoVu.clear();
-                gettingiaovu(x);
-                gettinttkt(x);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
     }
 
     private void hienthitinchitiet() {
-        // khoi tao mot man hinh moi
-        final Intent intent = new Intent(mContext, NewsGVChiTietActivity.class);
-        // lay du lieu
-        RequestQueue requestQueue = Volley.newRequestQueue(mContext);
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, selsectNews.url, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
+        try {
+            // khoi tao mot man hinh moi
+            final Intent intent = new Intent(mContext, NewsGVChiTietActivity.class);
+            // lay du lieu
+            RequestQueue requestQueue = Volley.newRequestQueue(mContext);
+            StringRequest stringRequest = new StringRequest(Request.Method.GET, selsectNews.url, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
 
-                Document document = Jsoup.parse(response);
-                if(document != null){
-                    Log.e("CALLAPI", "onResponse: " + document.toString());
-                    Elements elements = document.select("div[class=post-wrapper-content]");
-                    for (Element element : elements){
-                        Element element1context = element.getElementsByTag("p").first();
-                        Element element1context2 = element.getElementsByTag("p").get(2);
-                        Element element1context3 = element.getElementsByTag("p").get(3);
+                    Document document = Jsoup.parse(response);
+                    if(document != null){
+                        Log.e("CALLAPI", "onResponse: " + document.toString());
+                        Elements elements = document.select("div[class=post-wrapper-content]");
+                        for (Element element : elements){
+//                            Element element1context = element.getElementsByTag("p").first();
+//                            Element element1context2 = element.getElementsByTag("p").get(2);
+//                            Element element1context3 = element.getElementsByTag("p").get(3);
 
-                        System.out.println("day la p3" +element1context3);
+                            try {
+                                Element element1context = element.getElementsByTag("p").first();
+                                Element element1context2 = element.getElementsByTag("p").get(2);
+                                Element element1context3 = element.getElementsByTag("p").get(3);
 
-                        if(element1context != null){
-                            context_giaovu = element1context.text();
+                                if(element1context != null){
+                                    context_giaovu = element1context.text();
+                                }
+                                if(element1context2 != null){
+                                    context2_giaovu = element1context2.text();
+                                }
+                                if(element1context3 != null){
+                                    context3_giaovu = element1context3.text();
+                                }
+                            }catch (Exception e){
+                                e.printStackTrace();
+                                selsectNews.context = "123456789";
+                            }
+                            selsectNews.context=(context_giaovu+"\n"+context2_giaovu+"\n"+context3_giaovu+"\n"+context4_giaovu);
+                            // gui du lieu sang ben bang intent
+                            intent.putExtra("title",selsectNews.title);
+                            intent.putExtra("context",selsectNews.context);
+                            startActivity(intent);
+                            // goi ham animatiom
                         }
-                        if(element1context2 != null){
-                            context2_giaovu = element1context2.text();
-                        }
-                        if(element1context3 != null){
-                            context3_giaovu = element1context3.text();
-                        }
-                        selsectNews.context=(context_giaovu+"\n"+context2_giaovu+"\n"+context3_giaovu+"\n"+context4_giaovu);
-                        // gui du lieu sang ben bang intent
-                        intent.putExtra("title",selsectNews.title);
-                        intent.putExtra("context",selsectNews.context);
-                        startActivity(intent);
-                        // goi ham animatiom
                     }
-                }
 
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.e("CALLAPI", "onErrorResponse: " + error.getMessage());
-            }
-        });
-        //thuc hien lenh
-        requestQueue.add(stringRequest);
-        requestQueue.start();
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Log.e("CALLAPI", "onErrorResponse: " + error.getMessage());
+                }
+            });
+            //thuc hien lenh
+            requestQueue.add(stringRequest);
+            requestQueue.start();
+        }catch (Exception e){
+            Toast.makeText(mContext,"Không Thê Mở Tin",Toast.LENGTH_SHORT).show();
+            System.out.println("khong the mo man hinh moi");
+        }
 
     }
 }

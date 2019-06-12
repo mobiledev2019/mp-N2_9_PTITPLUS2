@@ -59,7 +59,7 @@
         android:id="@+id/txt_ketquatimkiem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -69,4 +69,11 @@
         android:layout_height="307dp"
         android:layout_marginTop="20dp"
         android:textSize="16sp" />
+    <Button
+        android:id="@+id/btn_showmap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xem Map"
+        android:layout_gravity="right"
+        android:visibility="invisible"/>
 </LinearLayout>

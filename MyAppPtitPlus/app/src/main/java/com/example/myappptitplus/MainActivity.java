@@ -26,6 +26,9 @@ import com.example.model.SoTay;
 import com.example.model.TimBus;
 import com.example.service.StartService;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -59,6 +62,8 @@ public class MainActivity extends AppCompatActivity
         //khoi dong service
         Intent intent = new Intent(this, StartService.class);
         startService(intent);
+
+        //test date
     }
 
 

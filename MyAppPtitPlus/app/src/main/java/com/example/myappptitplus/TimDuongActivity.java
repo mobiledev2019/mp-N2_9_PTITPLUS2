@@ -38,7 +38,7 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public class TimDuongActivity extends AppCompatActivity {
-    Button btn_timbus ;
+    Button btn_timbus ,btn_showmap;
     TextView txt_ketquatimkiem , txt_ketquabus;
     EditText edt_diembatdau , edt_diemden ;
     String diemdi , diemden ;
@@ -62,6 +62,7 @@ public class TimDuongActivity extends AppCompatActivity {
         txt_ketquabus = findViewById(R.id.txt_ketquabus);
         edt_diembatdau = findViewById(R.id.edt_diembatdau);
         edt_diemden = findViewById(R.id.edt_diemden);
+        btn_showmap = findViewById(R.id.btn_showmap);
     }
 
     private void addevents() {
@@ -78,6 +79,13 @@ public class TimDuongActivity extends AppCompatActivity {
                 urlApi = "https://maps.googleapis.com/maps/api/directions/json?origin=" +diemdi+ "&destination=" +diemden+"&mode=transit&key=AIzaSyDk4HCaLsS9c9EUs2yBW5c-zIQDA2d49j0";
                 LoadBusTask placeService = new LoadBusTask(TimDuongActivity.this);
                 placeService.execute();
+            }
+        });
+
+        btn_showmap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // tinh sau
             }
         });
     }
@@ -243,6 +251,7 @@ public class TimDuongActivity extends AppCompatActivity {
                 txt_ketquatimkiem.setText("Kết quả tìm kiếm :");
                 txt_ketquabus.clearComposingText();
                 txt_ketquabus.setText("");
+                btn_showmap.setVisibility(View.VISIBLE);
                 for (int i = 0 ;i<bus.size() ;i++){
                     txt_ketquabus.append(bus.get(i)+"\n\n" +">>> Điểm Dừng : "+stop.get(i)+"\n\n"+">>> Giá Vé : 7000đ"+"\n\n");
 

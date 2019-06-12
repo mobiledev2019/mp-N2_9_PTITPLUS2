@@ -24,6 +24,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.model_item.Lichthi;
 import com.example.myappptitplus.MainActivity;
 import com.example.myappptitplus.R;
 import com.example.model_item.class_urlthongbao;
@@ -33,7 +34,11 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+
+import static com.example.myappptitplus.LichThiActivity.arrayListLichthiSave;
 
 public class StartService extends Service {
 
@@ -60,7 +65,48 @@ public class StartService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         // thuc hien lenh trong day
         xylySevice();
+        xylySeviceLichthi();
         return START_STICKY;
+    }
+
+    private void xylySeviceLichthi() {
+        //Tạo đối tượng date sẽ lấy date hiện tại
+        Date date = new Date();
+
+        //Muốn xuất Ngày/Tháng/Năm , ví dụ 12/04/2013
+        String strDateFormat = "dd/MM/yyyy";
+        //tạo đối tượng SimpleDateFormat;
+        SimpleDateFormat sdf = new SimpleDateFormat(strDateFormat);
+        String ngayhientai = sdf.format(date);
+        String arrayngayhientai[] = ngayhientai.split("/");
+        for (int i = 0 ;i<arrayListLichthiSave.size();i++){
+            Lichthi lichthi = arrayListLichthiSave.get(i);
+            String ngaythi = lichthi.getNgayThi();
+            String arrayngaythi[] = ngaythi.split("/");
+            int moth = Integer.parseInt(arrayngayhientai[1]) - Integer.parseInt(arrayngaythi[1]);
+            int day = Integer.parseInt(arrayngayhientai[0]) - Integer.parseInt(arrayngaythi[0]);
+            if (moth == 1 && day <= 3){
+                hienthithongbaolichthi(lichthi,day);
+            }
+        }
+    }
+
+    private void hienthithongbaolichthi(Lichthi lichthi, int day) {
+        Intent intent = new Intent(this, MainActivity.class);
+        PendingIntent pIntent = PendingIntent.getActivity(this, (int) System.currentTimeMillis(), intent, 0);
+
+        Notification n  = new Notification.Builder(this)
+                .setContentTitle("Còn "+day+" đến ngày thi môn "+lichthi.getTenMonThi()+"ôn thi thôi nào !")
+                .setContentText("Lich Thi")
+                .setSmallIcon(R.drawable.ic_home)
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                .setContentIntent(pIntent)
+                .setAutoCancel(true).build();
+
+        NotificationManager notificationManager =
+                (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        n.flags |= Notification.FLAG_AUTO_CANCEL;
+        notificationManager.notify(0, n);
     }
 
     @Override

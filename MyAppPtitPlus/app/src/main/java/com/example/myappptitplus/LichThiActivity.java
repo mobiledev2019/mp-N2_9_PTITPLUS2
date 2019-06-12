@@ -32,6 +32,8 @@ import org.jsoup.select.Elements;
 import java.util.ArrayList;
 
 public class LichThiActivity extends AppCompatActivity {
+    public static ArrayList<Lichthi> arrayListLichthiSave = new ArrayList<>();
+
     TextView txt_mssv ;
     ListView lv_lichthi;
     LichthiAdapter lichthiAdapter;
@@ -103,13 +105,12 @@ public class LichThiActivity extends AppCompatActivity {
                         String Phut = thoigianthi +"("+hinhthuc+")";
                         System.out.println(NgayThi);
                         arrayListLichthi.add(new Lichthi(NgayThi,monthi,Phut,phongthi));
+                        // lua thong tin de xu ly thong bao
+                        arrayListLichthiSave.add(new Lichthi(NgayThi,monthi,Phut,phongthi));
                         System.out.println(arrayListLichthi);
-
                     }
                     lichthiAdapter = new LichthiAdapter(arrayListLichthi,LichThiActivity.this);
                     lv_lichthi.setAdapter(lichthiAdapter);
-////                    newsGiaoVuAdapter = new NewsGiaoVuAdapter(arrayListNewsGiaoVu,this);
-////                    lv_newGiaoVu.setAdapter(newsGiaoVuAdapter);
                 }
             }
         }, new Response.ErrorListener() {

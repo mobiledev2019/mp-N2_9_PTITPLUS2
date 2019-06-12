@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "418688429354",
+    "firebase_url": "https://root-micron-238102.firebaseio.com",
+    "project_id": "root-micron-238102",
+    "storage_bucket": "root-micron-238102.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:418688429354:android:a2ed6ef6cf5d3b62",
+        "android_client_info": {
+          "package_name": "com.example.imageeditor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "418688429354-30ibjt4ac0b26i966miaka5caflcv07v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.imageeditor",
+            "certificate_hash": "3a231ea20f454e270e031761679001447d8e1afc"
+          }
+        },
+        {
+          "client_id": "418688429354-vhm2dj1ppej1a4ucf5oe5me32jklc13f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDzVeOmRib83RPsxz9tfXqqHPK4HmPZhE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "418688429354-vhm2dj1ppej1a4ucf5oe5me32jklc13f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
