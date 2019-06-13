@@ -261,7 +261,7 @@ public class GiaoVu extends Fragment {
                                 Element element1context = element.getElementsByTag("p").first();
                                 Element element1context2 = element.getElementsByTag("p").get(2);
                                 Element element1context3 = element.getElementsByTag("p").get(3);
-
+                                Element element1context4 = element.getElementsByTag("p").get(4);
                                 if(element1context != null){
                                     context_giaovu = element1context.text();
                                 }
@@ -271,11 +271,14 @@ public class GiaoVu extends Fragment {
                                 if(element1context3 != null){
                                     context3_giaovu = element1context3.text();
                                 }
+                                if (element1context4 != null){
+                                    context4_giaovu = element1context4.text();
+                                }
+                                selsectNews.context=(context_giaovu+"\n"+context2_giaovu+"\n"+context3_giaovu+"\n"+context4_giaovu+"\n");
                             }catch (Exception e){
                                 e.printStackTrace();
-                                selsectNews.context = "123456789";
+                                selsectNews.context = "Nhà trường thông báo cho sinh viên về "+selsectNews.title+"\ntruy cập website để biết thêm chi tiết \n"+ selsectNews.url+"\n\n";
                             }
-                            selsectNews.context=(context_giaovu+"\n"+context2_giaovu+"\n"+context3_giaovu+"\n"+context4_giaovu);
                             // gui du lieu sang ben bang intent
                             intent.putExtra("title",selsectNews.title);
                             intent.putExtra("context",selsectNews.context);

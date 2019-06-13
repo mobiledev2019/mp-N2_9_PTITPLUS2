@@ -19,5 +19,6 @@
         android:id="@+id/txt_context_chitiet_GV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:autoLink="web"
         android:textSize="18sp" />
 </LinearLayout>
