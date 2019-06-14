@@ -62,7 +62,7 @@ public class TimDuongActivity extends AppCompatActivity {
         txt_ketquabus = findViewById(R.id.txt_ketquabus);
         edt_diembatdau = findViewById(R.id.edt_diembatdau);
         edt_diemden = findViewById(R.id.edt_diemden);
-        btn_showmap = findViewById(R.id.btn_showmap);
+
     }
 
     private void addevents() {
@@ -82,12 +82,7 @@ public class TimDuongActivity extends AppCompatActivity {
             }
         });
 
-        btn_showmap.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // tinh sau
-            }
-        });
+
     }
 
 //    public String biendoiString(String a){
@@ -251,7 +246,7 @@ public class TimDuongActivity extends AppCompatActivity {
                 txt_ketquatimkiem.setText("Kết quả tìm kiếm :");
                 txt_ketquabus.clearComposingText();
                 txt_ketquabus.setText("");
-                btn_showmap.setVisibility(View.VISIBLE);
+//                btn_showmap.setVisibility(View.VISIBLE);
                 for (int i = 0 ;i<bus.size() ;i++){
                     txt_ketquabus.append(bus.get(i)+"\n\n" +">>> Điểm Dừng : "+stop.get(i)+"\n\n"+">>> Giá Vé : 7000đ"+"\n\n");
 
