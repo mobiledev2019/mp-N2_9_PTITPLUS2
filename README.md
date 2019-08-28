@@ -64,3 +64,7 @@ https://secforlearn.blogspot.com/2016/08/implement-suricata-idsips-with-elk-why.
 http://pfelksuricata.3ilson.com/
 
 http://tprc.tanet.edu.tw/tpnet2018/training/10708.pdf
+
+https://401trg.com/using-emergingthreats-suricata-ruleset-to-scan-pcap/
+
+https://logz.io/blog/network-security-monitoring/
