@@ -68,3 +68,5 @@ http://tprc.tanet.edu.tw/tpnet2018/training/10708.pdf
 https://401trg.com/using-emergingthreats-suricata-ruleset-to-scan-pcap/
 
 https://logz.io/blog/network-security-monitoring/
+
+https://www.howtoforge.com/tutorial/suricata-with-elk-and-web-front-ends-on-ubuntu-bionic-beaver-1804-lts/
