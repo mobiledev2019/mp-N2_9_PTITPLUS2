@@ -55,6 +55,11 @@ console.log(obj.origin)
 }
 
 
+{"timestamp":"2019-08-29T21:28:30.561775+0700","event_type":"engine","engine":{"error_code":39,"error":"SC_ERR_INVALID_SIGNATURE","message":"error parsing signature \"alert http $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET CURRENT_EVENTS Possible Malicious Macro DL BIN May 2016 (No UA)\"; flow:established,to_server; content:\"GET\"; http_method; content:\"\/system\/\"; depth:8; http_uri; nocase; fast_pattern; pcre:\"\/^(?:cache|logs)\\\/[^\\x2f]+\\.(?:exe|dll|doc|bin)$\/URi\"; http_header_names; content:!\"Referer\"; reference:md5,c6747ca29d5c28f4349a5a8343d6b025; classtype:trojan-activity; sid:2022834; rev:5; metadata:created_at 2016_05_24, updated_at 2016_05_24;)\" from file \/etc\/suricata\/rules\/emerging-current_events.rules at line 4661"}}
+{"timestamp":"2019-08-29T21:28:30.562084+0700","event_type":"engine","engine":{"error_code":102,"error":"SC_ERR_RULE_KEYWORD_UNKNOWN","message":"unknown rule keyword 'http_header_names'."}}
+{"timestamp":"2019-08-29T21:28:30.562119+0700","event_type":"engine","engine":{"error_code":39,"error":"SC_ERR_INVALID_SIGNATURE","message":"error parsing signature \"alert http $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET CURRENT_EVENTS SUSPICIOUS Firesale gTLD EXE DL with no Referer June 13 2016\"; flow:established,to_server; content:\".exe\"; nocase; http_uri; fast_pattern; pcre:\"\/\\.(?:s(?:(?:(?:cien|pa)c|it)e|tream)|c(?:l(?:ick|ub)|ountry|ricket)|m(?:(?:aiso|e)n|o(?:bi|m))|p(?:r(?:ess|o)|arty|ink|w)|r(?:e(?:[dn]|view)|acing)|w(?:eb(?:site|cam)|in)|b(?:(?:outiq|l)ue|id)|d(?:ownload|ate|esi)|(?:accountan|hos)t|l(?:o(?:an|l)|ink)|t(?:rade|ech|op)|v(?:oyage|ip)|g(?:dn|b)|online|faith|kim|xyz)(?:\\x3a\\d{1,5})?$\/W\"; http_header_names; content:!\"Referer\"; content:!\"Cookie\";  classtype:trojan-activity; sid:2022896; rev:5; metadata:created_at 2016_06_14, updated_at 2017_02_17;)\" from file \/etc\/suricata\/rules\/emerging-current_events.rules at line 4663"}}
+
+
 
 
 
